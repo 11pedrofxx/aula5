@@ -1,0 +1,37 @@
+import { Router } from "express";
+const endpoints = Router();
+
+
+endpoints.get('/areaQuadrado', (req, resp) => {
+    let lado = Number(req.query.lado);
+
+    let area = lado * 4;
+    resp.send ({
+
+        resposta: area
+
+    })
+
+    // TODO: calcular área do quadrado
+})
+
+
+endpoints.get('/areaRetangulo/:largura/:altura', (req, resp) => {
+    let largura = Number(req.params.largura);
+    let altura = Number(req.params.altura);
+
+    // TODO: calcular área do retângulo
+})
+
+
+endpoints.post('/areaTriangulo', (req, resp) => {
+    let corpo = req.body;
+
+    let base = corpo.base;
+    let altura = corpo.altura;
+
+    // TODO: calcular área do triângulo
+})
+
+
+export default endpoints;
