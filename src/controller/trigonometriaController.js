@@ -20,7 +20,12 @@ endpoints.get('/areaRetangulo/:largura/:altura', (req, resp) => {
     let largura = Number(req.params.largura);
     let altura = Number(req.params.altura);
 
-    // TODO: calcular área do retângulo
+    let area = largura * altura
+    resp.send ({
+        
+        resposta: `A area do retangulo é ${area}`
+
+    })
 })
 
 
@@ -30,7 +35,13 @@ endpoints.post('/areaTriangulo', (req, resp) => {
     let base = corpo.base;
     let altura = corpo.altura;
 
-    // TODO: calcular área do triângulo
+    let conta = base * altura;
+    let area = conta / 2
+    resp.send ({
+
+        resposta: area
+
+    })
 })
 
 
