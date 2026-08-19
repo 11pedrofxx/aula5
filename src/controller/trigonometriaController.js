@@ -5,7 +5,7 @@ const endpoints = Router();
 endpoints.get('/areaQuadrado', (req, resp) => {
     let lado = Number(req.query.lado);
 
-    let area = lado * 4;
+    let area = lado * lado;
     resp.send ({
 
         resposta: area

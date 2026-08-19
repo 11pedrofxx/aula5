@@ -37,11 +37,11 @@ endpoints.post('/meusPais', (req, resp) => {
 
 endpoints.post('/irmaos', (req, resp) => {
     let corpo = req.body;
-
-    let irmaos = corpo.irmaos;
+    let quantidade = req.body.quantidade;
+    let irmaos = req.body.irmaos;
 
     resp.send({
-        quantidade: irmaos.length,
+        quantidade: quantidade,
         irmaos: irmaos
     })
 })
